@@ -9,14 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSanook.VersionNumberToV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSanook.VersionNumberToVersionCode.WinApp", "CodeSanook.VersionNumberToVersionCode.WinApp\CodeSanook.VersionNumberToVersionCode.WinApp.csproj", "{70AC6506-269B-4108-BC0B-EBBEC81CD159}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C309781A-DA75-4893-B776-F4E7D020653A}"
-	ProjectSection(SolutionItems) = preProject
-		Tools\Add-Nuspec.ps1 = Tools\Add-Nuspec.ps1
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{995A175F-DCE4-4D69-BEBB-13C37B4DEE1A}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
