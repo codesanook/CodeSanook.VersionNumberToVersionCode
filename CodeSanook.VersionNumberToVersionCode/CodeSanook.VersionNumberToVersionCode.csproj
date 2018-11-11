@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Aaron</Authors>
+    <Description>To convert semantic versioning to integer and sorable version code</Description>
   </PropertyGroup>
 
 </Project>
