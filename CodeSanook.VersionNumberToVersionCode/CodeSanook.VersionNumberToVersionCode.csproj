@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Aaron</Authors>
-    <Description>To convert semantic versioning to integer and sorable version code</Description>
-  </PropertyGroup>
-
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>Aaron</Authors>
+        <Description>To convert semantic versioning to integer and sorable version code</Description>
+        <PackageTags>versioning sem-ver</PackageTags>
+    </PropertyGroup>
 </Project>
