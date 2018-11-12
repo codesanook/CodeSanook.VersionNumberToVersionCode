@@ -334,3 +334,5 @@ ASALocalRun/
 .localhistory/
 # Sass
 assets/scss
+
+CodeSanook.VersionNumberToVersionCode.JS/VersionConverter.cs

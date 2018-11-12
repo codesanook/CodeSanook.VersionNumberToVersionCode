@@ -10,7 +10,7 @@ namespace Codesanook.VersionNumberToVersionCode
         /// <summary>
         /// version number supports major.minor.patch
         /// </summary>
-        private static Regex versionNumberPattern = new Regex(@"(?<major>\d+)\.(?<minor>\d{1,2})\.(?<patch>\d{1,2})", RegexOptions.Compiled);
+        private static Regex versionNumberPattern = new Regex(@"(?<major>\d+)\.(?<minor>\d{1,2})\.(?<patch>\d{1,2})");
 
         public static int VersionNumberToVersionCode(string filePathWithVersionNumber)
         {
