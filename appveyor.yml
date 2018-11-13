@@ -1,13 +1,29 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+configuration: Release
 before_build:
 - ps: nuget restore
 build:
   publish_nuget: true
   verbosity: minimal
+after_build:
+- ps: 7z a CodeSanook.VersionNumberToVersionCode.JS/dist/CodeSanook.VersionNumberToVersionCode.JS.zip $env:APPVEYOR_BUILD_FOLDER/CodeSanook.VersionNumberToVersionCode.JS/bin/Release/bridge/*.js
+artifacts:
+- path: CodeSanook.VersionNumberToVersionCode.JS/dist/CodeSanook.VersionNumberToVersionCode.JS.zip
+  name: CodeSanook.VersionNumberToVersionCode.JS.zip
 deploy:
 - provider: NuGet
   api_key:
     secure: xKi5tQ2ED3G/9Hc6OCxJpRyEp7GZMHBl1twwyUx8Qhmkrr6+4nOI4EE17q9FC+ub
   skip_symbols: true
   artifact: /.*\.nupkg/
+- provider: GitHub
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  release: CodeSanook.VersionNumberToVersionCode.JS v$(APPVEYOR_REPO_TAG_NAME)
+  description: Version code to version number
+  auth_token:
+    secure: x0efMWsXGGoegCJVZ7QMYiNqIcHZBpIRcmHH2lcooUPOB6HvSUK83W6vqwB2j6ls
+  artifact: /CodeSanook.VersionNumberToVersionCode.JS/dist/.*\.zip/
+  prerelease: false
+  on:
+    branch: master
